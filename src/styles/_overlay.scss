@@ -1,0 +1,140 @@
+$light: #dedede;
+$dark: #2c3e50;
+
+.container {
+  width: inherit;
+  height: inherit;
+  min-height: 400px;
+  position: relative;
+}
+
+.blur {
+  backdrop-filter: blur(110);
+  -webkit-backdrop-filter: blur(110);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.overlay-bg {
+  width: inherit;
+  height: inherit;
+  opacity: 0.98;
+  position: absolute;
+  top: 0;
+  z-index: 0 !important;
+  border-radius: 5px;
+}
+
+.overlay-light > .overlay-bg {
+  background-color: $light;
+}
+
+.overlay-dark > .overlay-bg {
+  background-color: $dark;
+}
+
+.overlay-content {
+  z-index: 1 !important;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  align-items: center;
+  height: inherit;
+}
+
+.box {
+  width: 100%;
+  margin-top: -20px;
+}
+
+.overlay-title, .overlay-subtitle {
+  width: 100%;
+}
+
+.overlay-subtitle {
+  margin-top: -15px;
+}
+
+
+.overlay-light .overlay-title, .overlay-dark .overlay-subtitle {
+  color: #000000 !important;
+}
+
+.overlay-dark .overlay-title, .overlay-dark .overlay-subtitle {
+  color: #ffffff !important;
+}
+
+.overlay-input {
+  border-radius: 10px;
+  outline: none;
+  max-width: 450px;
+  width: 100%;
+  padding: 12px 5px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-items: center;
+  box-sizing: border-box;
+  border: none;
+  font-size: 25px;
+}
+
+.has-error{
+  border: 1px solid rgba(255, 5, 5, 0.2);
+}
+
+.overlay-dark .overlay-input {
+  background-color: white !important;
+  color: black !important;
+}
+
+.overlay-light .overlay-input {
+  background-color: #bebebe !important;
+  color: #ffffff !important;
+}
+
+.overlay-button{
+  position: relative;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 12px 50px;
+  border: none;
+  font-size: 15px;
+  background-color: #ee9828;
+  color: white;
+}
+
+.overlay-button:hover{
+  cursor: pointer;
+}
+
+.shake-animation{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

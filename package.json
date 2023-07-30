@@ -1,0 +1,34 @@
+{
+  "name": "vuesecurelock",
+  "version": "1.1.0",
+  "description": "",
+  "main": "dist/library.js",
+  "module": "dist/library.mjs",
+  "files": [
+    "dist/*"
+  ],
+  "peerDependencies": {
+    "vue": "^3.2.21"
+  },
+  "scripts": {
+    "run": "",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yousifnimah/VueSecureLock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yousifnimah/VueSecureLock/issues"
+  },
+  "homepage": "https://github.com/yousifnimah/VueSecureLock#readme",
+  "devDependencies": {
+    "rollup": "^3.27.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-vue": "^6.0.0"
+  }
+}
