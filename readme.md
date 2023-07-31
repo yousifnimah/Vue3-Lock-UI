@@ -73,12 +73,29 @@ Full example:
 
 
 ## Props:
+
+- Password (Required)
+
+  It uses to set the matching password that unlocks a UI element.
+
+  ```
+  Type: String 
+  ```
+
+  Example:
+
+   ```vue
+   <VLockUI Password="1234">
+     <!--UI kits that you want to lock with password -->
+   </VLockUI>
+   ```
+
  - RememberState
 
    It uses to make enable/disable LockUI overlay with expiration minutes.
     
    ```
-    Type: Object{enabled: Boolean, expiryMin: Number} 
+   Type: Object{enabled: Boolean, expiryMin: Number} 
    ```
    
    Example:
@@ -90,7 +107,8 @@ Full example:
     ```
  
 
- - #### Button Color
+ - Button Color
+
     It uses to customize a color for the unlock button
 
    ```
@@ -137,11 +155,15 @@ Full example:
 
  - #### Title
    to change the title of the overlay.
-   
+    
+   ```
+   Type: String 
+   ```
+     
    Example:
 
       ```vue
-      <VLockUI Title="Please enter the password" Password="1234">
+      <VLockUI Title="This element is locked" Password="1234">
         <!--UI kits that you want to lock with password -->
       </VLockUI>
       ```
@@ -149,10 +171,14 @@ Full example:
  - #### Subtitle
    to change the subtitle of the overlay.
 
+   ```
+   Type: String 
+   ```
+
  - Example:
 
      ```vue
-     <VLockUI Subtitle="Please enter the password" Password="1234">
+     <VLockUI Subtitle="Enter the password to unlock the element" Password="1234">
        <!--UI kits that you want to lock with password -->
      </VLockUI>
      ```
