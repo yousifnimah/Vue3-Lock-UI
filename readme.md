@@ -4,7 +4,7 @@
 <h1 align="center">Vue Secure Lock</h1>
 <p>A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications. </p>
 
-###Key Features
+<h3>Key Features:</h3>
 - Easy integration: Can quickly incorporate VueSecureLock's features into their applications without extensive effort.
 - Customizable: VueSecureLock allows easy customization, enabling you to change colors and set expiration for state memory.
 - Theming Support: The library provides light and dark theming support, allowing developers to match the password-related UI components with the overall design and branding of their Vue applications.
