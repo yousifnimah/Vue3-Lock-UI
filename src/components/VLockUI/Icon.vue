@@ -52,4 +52,10 @@ defineComponent({
 .switch-slider::before {
   background: var(--background)!important;
 }
+.switch-slider em {
+  background: var(--background)!important;
+}
+.switch-slider em:after {
+  border-color: var(--background)!important;
+}
 </style>

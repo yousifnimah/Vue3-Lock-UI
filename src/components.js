@@ -1,3 +1,3 @@
-import LockElem from "./components/LockElem/LockElem.vue";
+import VLockUI from "./components/VLockUI/VLockUI.vue";
 
-export default {LockElem}
+export default {VLockUI}

@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <div v-if="!Secured" class="overlay" :class="{'overlay-light': !dark, 'overlay-dark': dark}">
+    <div v-if="!Secured" class="overlay" :class="{'overlay-light': !Dark, 'overlay-dark': Dark}">
       <form @submit.prevent="unlock" class="overlay-content">
         <div class="box">
-          <Icon :locked-color="LockedColor" :locked="Locked"/>
-          <h2 class="overlay-title">{{ title }}</h2>
-          <p class="overlay-subtitle">{{ subtitle }}</p>
+          <Icon :UnlockedColor="UnlockedColor" :LockedColor="LockedColor" :locked="Locked"/>
+          <h2 class="overlay-title">{{ Title }}</h2>
+          <p class="overlay-subtitle">{{ Subtitle }}</p>
           <input ref="password" v-model="InputPassword" autofocus class="overlay-input" :class="{'shake-animation': shakeAnimation, 'has-error': msg !== ''}" type="password" id="password" name="password">
-          <button type="submit" :style="{'background-color': ButtonColor}" class="overlay-button">{{ buttonText }}</button>
+          <button type="submit" :style="{'background-color': ButtonColor}" class="overlay-button">{{ ButtonText }}</button>
         </div>
       </form>
       <div class="overlay-bg" :class="{'blur': blur}"/>
@@ -29,37 +29,37 @@ const props = defineProps({
     type: String,
     default: '#ee9828'
   },
-  UnLockedColor: {
+  UnlockedColor: {
     type: String,
     default: '#d3d3d3'
   },
-  rememberState: {
+  RememberState: {
     type: Object,
     default: () => {
       return {enabled: true, expiryMin: 10}
     },
   },
-  password: {
+  Password: {
     type: String,
     default: null
   },
-  dark: {
+  Dark: {
     type: Boolean,
     default: false
   },
-  blur: {
+  Blur: {
     type: Boolean,
     default: false
   },
-  title: {
+  Title: {
     type: String,
     default: "This element is locked"
   },
-  subtitle: {
+  Subtitle: {
     type: String,
     default: "Enter the password to unlock this element"
   },
-  buttonText: {
+  ButtonText: {
     type: String,
     default: "Unlock"
   }
@@ -77,7 +77,7 @@ const lock = () => {
 
 const unlock = () => {
   msg.value = "";
-  if (InputPassword.value === props.password) {
+  if (InputPassword.value === props.Password) {
     Locked.value = false;
     setTimeout(() => {
       Secured.value = true
@@ -93,8 +93,8 @@ const unlock = () => {
 };
 
 const SetCacheState = () => {
-  if (props.rememberState?.enabled) {
-    const ExpirationMinutes = props.rememberState.expiryMin
+  if (props.RememberState?.enabled) {
+    const ExpirationMinutes = props.RememberState.expiryMin
     const Expiry = addMinutesToCurrentDateTime(ExpirationMinutes)
     localStorage.setItem('Expiry', Expiry.toString())
   }
@@ -102,7 +102,7 @@ const SetCacheState = () => {
 
 const CheckCachedState = () => {
   let Expiry = null
-  if (props.rememberState?.enabled) {
+  if (props.RememberState?.enabled) {
     Expiry = localStorage.getItem('Expiry')
     Secured.value = isValidCacheState(Expiry)
   }
@@ -135,7 +135,7 @@ onMounted(() => {
 })
 
 defineComponent({
-  name: "LockElem",
+  name: "VLockUI",
   components: {
     Icon
   }
