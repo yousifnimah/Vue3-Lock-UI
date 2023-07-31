@@ -1,8 +1,11 @@
 <p align="center">
 <img alt="VueSecureLock" title="vue secure lock logo" src="https://i.imgur.com/yKoJZrb.png" width="450">
 </p>
-<h1 align="center">Vue Secure Lock</h1>
+<h1 align="center">Vue Secure Lock for Vue3</h1>
 <p>A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications. </p>
+
+<h2>Demo<h2><hr>
+<img style="border:1px solid #dedede" src="https://i.imgur.com/HuudLm4.gif">
 
 <h3>Key Features:</h3>
 <ul>
@@ -32,11 +35,13 @@ npm install vuesecurelock
   </div>
 </template>
 <script lang="ts">
+  import {Options, Vue} from 'vue-class-component';
   import LockElem from 'vuesecurelock'
+  @Options({
+    components: {LockElem}
+  })
+export default class HomeView extends Vue {}
 </script>
 ```
-
-<img style="border:1px solid #dedede" src="https://i.imgur.com/n2npalY.png">
-<img style="border:1px solid #dedede" src="https://i.imgur.com/YTIf6dc.gif">
 
 
