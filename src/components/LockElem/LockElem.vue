@@ -7,7 +7,7 @@
           <h2 class="overlay-title">{{ title }}</h2>
           <p class="overlay-subtitle">{{ subtitle }}</p>
           <input ref="password" v-model="InputPassword" autofocus class="overlay-input" :class="{'shake-animation': shakeAnimation, 'has-error': msg !== ''}" type="password" id="password" name="password">
-          <button type="submit" class="overlay-button">{{ buttonText }}</button>
+          <button type="submit" :style="{'background-color': ButtonColor}" class="overlay-button">{{ buttonText }}</button>
         </div>
       </form>
       <div class="overlay-bg" :class="{'blur': blur}"/>
@@ -21,6 +21,10 @@ import {defineComponent, defineProps, onMounted, ref} from "vue";
 import Icon from "./Icon.vue";
 
 const props = defineProps({
+  ButtonColor: {
+    type: String,
+    default: '#ee9828'
+  },
   LockedColor: {
     type: String,
     default: '#ee9828'
