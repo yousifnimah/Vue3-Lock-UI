@@ -35,13 +35,14 @@ import VLockUi from 'v-lock-ui'
 
 ```vue
 defineComponent({
-    components: {VLockUi}
+components: {VLockUi}
 });
 ```
 
 Last step, inside the template add any element or UI component into it and set the **password** that you want to match with.
 
 ```vue
+
 <template>
   <div class="home">
     <VLockUi Password="1234">
@@ -71,7 +72,6 @@ Full example:
 </script>
 ```
 
-
 ## Props:
 
 - Password (Required)
@@ -90,96 +90,162 @@ Full example:
    </VLockUI>
    ```
 
- - RememberState
+<hr />
 
-   It uses to make enable/disable LockUI overlay with expiration minutes.
-    
-   ```
-   Type: Object{enabled: Boolean, expiryMin: Number} 
-   ```
-   
-   Example:
-   
-    ```vue
-    <VLockUI :RememberState="{enabled: true, expiryMin: 10}" Password="1234">
-      <!--UI kits that you want to lock with password -->
-    </VLockUI>
-    ```
- 
+- RememberState
 
- - Button Color
+  It uses to make enable/disable LockUI overlay with expiration minutes.
 
-    It uses to customize a color for the unlock button
+  ```
+  Type: Object{enabled: Boolean, expiryMin: Number} 
+  ```
 
-   ```
-   Type: String 
-   ```
-   
-    Example:
-
-    ```vue
-    <VLockUI ButtonColor="#008000" Password="1234">
-      <!--UI kits that you want to lock with password -->
-    </VLockUI>
-    ```
-   
- - #### Locked Color
-   It uses to customize a color for lock icon in locked situation
-
-   ```
-   Type: String 
-   ```
-   
-   Example:
-
-     ```vue
-     <VLockUI LockedColor="#e90000" Password="1234">
-       <!--UI kits that you want to lock with password -->
-     </VLockUI>
-     ```
-
- - #### Unlocked Color
-   To customize a color for icon in unlocked situation
-
-   ```
-   Type: String 
-   ```
-   
-   Example:
+  Example:
 
    ```vue
-   <VLockUI UnlockedColor="#e90000" Password="1234">
+   <VLockUI :RememberState="{enabled: true, expiryMin: 10}" Password="1234">
      <!--UI kits that you want to lock with password -->
    </VLockUI>
    ```
 
- - #### Title
-   to change the title of the overlay.
-    
-   ```
-   Type: String 
-   ```
-     
-   Example:
+<hr />
 
-      ```vue
-      <VLockUI Title="This element is locked" Password="1234">
-        <!--UI kits that you want to lock with password -->
-      </VLockUI>
-      ```
+- Button Color
 
- - #### Subtitle
-   to change the subtitle of the overlay.
+  It uses to customize a color for the unlock button
 
-   ```
-   Type: String 
+  ```
+  Type: String 
+  ```
+
+  Example:
+
+   ```vue
+   <VLockUI ButtonColor="#008000" Password="1234">
+     <!--UI kits that you want to lock with password -->
+   </VLockUI>
    ```
 
- - Example:
+<hr />
+
+- Locked Color
+
+  It uses to customize a color for lock icon in locked situation
+
+  ```
+  Type: String 
+  ```
+
+  Example:
+
+    ```vue
+    <VLockUI LockedColor="#e90000" Password="1234">
+      <!--UI kits that you want to lock with password -->
+    </VLockUI>
+    ```
+
+<hr />
+
+- Unlocked Color
+
+  To customize a color for icon in unlocked situation
+
+  ```
+  Type: String 
+  ```
+
+  Example:
+
+  ```vue
+  <VLockUI UnlockedColor="#e90000" Password="1234">
+    <!--UI kits that you want to lock with password -->
+  </VLockUI>
+  ```
+
+<hr />
+
+- Title
+
+  to change the title of the overlay.
+
+  ```
+  Type: String 
+  ```
+
+  Example:
 
      ```vue
-     <VLockUI Subtitle="Enter the password to unlock the element" Password="1234">
+     <VLockUI Title="This element is locked" Password="1234">
        <!--UI kits that you want to lock with password -->
      </VLockUI>
      ```
+
+<hr />
+
+- Subtitle
+
+  to change the subtitle of the overlay.
+
+  ```
+  Type: String 
+  ```
+
+  Example:
+
+    ```vue
+    <VLockUI Subtitle="Enter the password to unlock the element" Password="1234">
+      <!--UI kits that you want to lock with password -->
+    </VLockUI>
+    ```
+<hr />
+
+- ButtonText
+
+  to change the text of unlock button.
+
+   ```
+   Type: String 
+   ```
+
+  Example:
+
+    ```vue
+    <VLockUI ButtonText="Click button" Password="1234">
+      <!--UI kits that you want to lock with password -->
+    </VLockUI>
+    ```
+<hr />
+
+- Dark
+
+  to support dark theme
+
+   ```
+   Type: Boolean 
+   ```
+
+  Example:
+
+    ```vue
+    <VLockUI :Dark="true" Password="1234">
+      <!--UI kits that you want to lock with password -->
+    </VLockUI>
+    ```
+<hr />
+             
+- Blur
+
+  To change background to backdrop blur
+
+    ```
+    Type: Boolean 
+    ```
+
+  Example:
+
+    ```vue
+    <VLockUI :Blur="true" Password="1234">
+      <!--UI kits that you want to lock with password -->
+    </VLockUI>
+    ```
 
