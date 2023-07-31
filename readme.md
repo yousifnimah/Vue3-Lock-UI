@@ -36,6 +36,6 @@ npm install vuesecurelock
 </script>
 ```
 
-<img width="500px" src="https://i.imgur.com/n2npalY.png">
+<img src="https://i.imgur.com/n2npalY.png">
 
 
