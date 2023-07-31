@@ -1,21 +1,26 @@
 <p align="center">
-<img alt="VueLockUI" title="vue secure lock logo" src="https://i.imgur.com/yKoJZrb.png" width="450">
+  <img alt="VueLockUI" title="vue lock ui logo" src="https://i.imgur.com/yKoJZrb.png" width="450">
 </p>
 <h1 align="center">Vue3 Lock UI</h1>
-<p>A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications. </p>
 
-<h2>Demo<h2><hr>
-<img style="border:1px solid #dedede" src="https://i.imgur.com/HuudLm4.gif">
 
-<h3>Key Features:</h3>
-<ul>
-    <li>Vue 3 support</li>
-    <li>TypeScript support</li>
-    <li>Easy integration: Can quickly incorporate VueSecureLock's features into application without extensive effort.</li>
-    <li>Customizable: VueLockUI allows easy customization, enabling you to change colors and set expiration for state memory.</li>
-    <li>Theming Support: The library provides light and dark theming support, allowing developers to match the password-related UI components with the overall design and branding of their Vue applications.</li>
-    <li>Localization: Supports localization, making it easy for developers to translate and adapt the password-related UI components for a global audience</li>
-</ul>
+A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications.
+
+## Demo
+
+---
+
+<img style="border: 1px solid #dedede" src="https://i.imgur.com/HuudLm4.gif">
+
+## Key Features:
+
+- Vue 3 support
+- TypeScript support
+- Easy integration: Can quickly incorporate VueSecureLock's features into the application without extensive effort.
+- Customizable: VueLockUI allows easy customization, enabling you to change colors and set expiration for state memory.
+- Theming Support: The library provides light and dark theming support, allowing developers to match the password-related UI components with the overall design and branding of their Vue applications.
+- Localization: Supports localization, making it easy for developers to translate and adapt the password-related UI components for a global audience.
+
 
 <h3>Installation</h3><hr>
 
@@ -25,17 +30,17 @@ npm install v-lock-ui
 
 <h3>Usage</h3><hr>
 
-<p>To use v-lock-ui, simply import component<p>
+<p>To use VueLockUI, simply import the component:<p>
 
 ```js
 import VLockUi from 'v-lock-ui'
 ``` 
 
-<p>Then register it to vue components</p>
+<p>Then register it as a Vue component:</p>
 
 ```vue
 defineComponent({
-components: {VLockUi}
+  components: {VLockUi}
 });
 ```
 
@@ -52,23 +57,30 @@ Last step, inside the template add any element or UI component into it and set t
 </template>
 ```
 
-Full example:
+Full Example:
 
 ``` vue
 <template>
   <div class="home">
-    <VLockUi Password="1234">
+    <VLockUI Password="1234">
       <img alt="Vue logo" src="../assets/logo.png">
-      <h1>Hello World</h1>
-    </VLockUi>
+      <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    </VLockUI>
   </div>
 </template>
+
 <script setup lang="ts">
-  import {defineComponent} from "vue";
-  import VLockUi from 'v-lock-ui'
-  defineComponent({
-      components: {VLockUi}
-  });
+import {defineComponent, ref} from "vue";
+import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import VLockUI from "@/components/VLockUI/VLockUI.vue";
+
+defineComponent({
+  name: "HomeView",
+  components: {
+    VLockUI,
+    HelloWorld
+  }
+});
 </script>
 ```
 
@@ -76,7 +88,7 @@ Full example:
 
 - Password (Required)
 
-  It uses to set the matching password that unlocks a UI element.
+  Set the matching password that unlocks a UI element.
 
   ```
   Type: String 
@@ -94,7 +106,7 @@ Full example:
 
 - RememberState
 
-  It uses to make enable/disable LockUI overlay with expiration minutes.
+  Enable/disable LockUI overlay with expiration minutes.
 
   ```
   Type: Object{enabled: Boolean, expiryMin: Number} 
@@ -112,7 +124,7 @@ Full example:
 
 - Button Color
 
-  It uses to customize a color for the unlock button
+  Customize the color for the unlock button.
 
   ```
   Type: String 
@@ -130,7 +142,7 @@ Full example:
 
 - Locked Color
 
-  It uses to customize a color for lock icon in locked situation
+  Customize the color for the lock icon in a locked situation.
 
   ```
   Type: String 
@@ -148,7 +160,7 @@ Full example:
 
 - Unlocked Color
 
-  To customize a color for icon in unlocked situation
+  Customize the color for the icon in an unlocked situation.
 
   ```
   Type: String 
@@ -166,7 +178,7 @@ Full example:
 
 - Title
 
-  to change the title of the overlay.
+  Change the title of the overlay.
 
   ```
   Type: String 
@@ -184,7 +196,7 @@ Full example:
 
 - Subtitle
 
-  to change the subtitle of the overlay.
+  Change the subtitle of the overlay.
 
   ```
   Type: String 
@@ -197,11 +209,12 @@ Full example:
       <!--UI kits that you want to lock with password -->
     </VLockUI>
     ```
+
 <hr />
 
 - ButtonText
 
-  to change the text of unlock button.
+  Change the text of the unlock button.
 
    ```
    Type: String 
@@ -214,11 +227,12 @@ Full example:
       <!--UI kits that you want to lock with password -->
     </VLockUI>
     ```
+
 <hr />
 
 - Dark
 
-  to support dark theme
+  Support dark theme.
 
    ```
    Type: Boolean 
@@ -231,11 +245,12 @@ Full example:
       <!--UI kits that you want to lock with password -->
     </VLockUI>
     ```
+
 <hr />
-             
+
 - Blur
 
-  To change background to backdrop blur
+  Change the background to a backdrop blur.
 
     ```
     Type: Boolean 
@@ -248,4 +263,34 @@ Full example:
       <!--UI kits that you want to lock with password -->
     </VLockUI>
     ```
+
+## Functions:
+
+- ### lock()
+  This function is used to lock elements. Here is an example of how to use it:
+
+```vue
+
+<template>
+  <div class="home">
+    <VLockUI ref="VLockUIRef" LockedColor="#e90000" Password="1234">
+      <!--UI kits that you want to lock with password -->
+    </VLockUI>
+  </div>
+</template>
+
+<script setup lang="ts">
+import {defineComponent, ref} from "vue";
+import VLockUI from "@/components/VLockUI/VLockUI.vue";
+
+const VLockUIRef = ref(null)
+VLockUI.value.lock() //This function used to lock elements 
+
+defineComponent({
+  components: {VLockUI}
+});
+
+</script>
+
+```
 
