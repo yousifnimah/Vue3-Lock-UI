@@ -15,11 +15,13 @@
 </ul>
 
 <h3>Installation</h3><hr>
+
 ```
 npm install vuesecurelock
 ```
 
 <h3>Using with Vue3</h3><hr>
+
 ```
 <template>
   <div class="home">
