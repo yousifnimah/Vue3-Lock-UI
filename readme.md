@@ -299,7 +299,12 @@ defineComponent({
 Contributions are welcome! If you find any issues or want to add new features or improvements, please create a pull request.
 
 ## Acknowledgments
-This library is inspired by the need for number-to-word conversion in various applications.
-Contact
-For any questions or inquiries, please feel free to contact me.
+
+Special thanks to all the contributors who have helped in the development and improvement of Vue3 Lock UI. Your valuable contributions have made this project possible and better.
+
+We would also like to express our gratitude to the Vue.js community for their continuous support, feedback, and inspiration.
+
+This project is built upon the great work of the Vue.js team and the Vue ecosystem, which has provided a solid foundation for the development of Vue3 Lock UI.
+
+Thank you to all the open-source projects and libraries that have been utilized in this project, as they have played a crucial role in enhancing the functionality and user experience of Vue3 Lock UI.
 
