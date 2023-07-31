@@ -36,6 +36,12 @@ npm install vuesecurelock
 </script>
 ```
 
-<img src="https://i.imgur.com/n2npalY.png">
+<img style="border:1px solid #dedede" src="https://i.imgur.com/n2npalY.png">
+
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="https://i.imgur.com/n2npalY.png">
+    <source src="https://i.imgur.com/0FgixG5.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
