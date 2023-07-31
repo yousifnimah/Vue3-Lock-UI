@@ -1,24 +1,55 @@
 <template>
   <div class="switch-container">
-    <label class="switch">
+    <label ref="switchLabel" class="switch">
       <input disabled type="checkbox" :checked="locked">
-      <span><em></em><strong></strong></span>
+      <span id="switch-slider" class="switch-slider"><em></em><strong></strong></span>
     </label>
   </div>
 </template>
 
-<script>
-export default {
-  name: "LockedIcon",
-  props: {
-    locked: {
-      type: Boolean,
-      default: true
-    }
+<script setup lang="ts">
+import {defineComponent, defineProps, onMounted, ref, watch} from "vue";
+const switchLabel = ref(null);
+
+const props = defineProps({
+  LockedColor: {
+    type: String,
+    default: '#ee9828'
+  },
+  UnlockedColor: {
+    type: String,
+    default: '#d3d3d3'
+  },
+  locked: {
+    type: Boolean,
+    default: true
+  }
+})
+
+watch(() => props.locked, () => {
+  updateStyle()
+});
+
+const updateStyle = () => {
+  const spanSlider = switchLabel.value.querySelector(".switch-slider");
+  if (props.locked) {
+    spanSlider.style.setProperty('--background', props.LockedColor);
+  } else {
+    spanSlider.style.setProperty('--background', props.UnlockedColor);
   }
 }
+
+onMounted(() => {
+  updateStyle()
+})
+
+defineComponent({
+  name: "LockedIcon",
+})
 </script>
 
 <style scoped>
-
+.switch-slider::before {
+  background: var(--background)!important;
+}
 </style>
