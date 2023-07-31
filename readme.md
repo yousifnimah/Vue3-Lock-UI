@@ -294,3 +294,12 @@ defineComponent({
 
 ```
 
+
+## Contributing
+Contributions are welcome! If you find any issues or want to add new features or improvements, please create a pull request.
+
+## Acknowledgments
+This library is inspired by the need for number-to-word conversion in various applications.
+Contact
+For any questions or inquiries, please feel free to contact me.
+
