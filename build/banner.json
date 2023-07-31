@@ -1,92 +1,75 @@
 {
   "text": "/*! VueLockUI v${version} */",
-  config = [
-  {
-    input: entries,
-    external: ['vue'],
-    output: {
-      format: 'esm',
-      dir: 'dist/esm',
-      entryFileNames: '[name].mjs',
-      chunkFileNames: '[name]-[hash].mjs',
+  "config": [
+    {
+      "input": "entries",
+      "external": ["vue"],
+      "output": {
+        "format": "esm",
+        "dir": "dist/esm",
+        "entryFileNames": "[name].mjs",
+        "chunkFileNames": "[name]-[hash].mjs"
+      },
+      "plugins": [
+        "node({ extensions: ['.vue', '.ts'] })",
+        "typescript({ typescript: require('typescript') })",
+        "vue(vuePluginConfig)",
+        "babel(babelOptions)",
+        "cjs()"
+      ]
     },
-    plugins: [
-      node({
-        extensions: ['.vue', '.ts']
-      }),
-      typescript({
-        typescript: require('typescript')
-      }),
-      vue(vuePluginConfig),
-      babel(babelOptions),
-      cjs()
-    ]
-  },
-  {
-    input: 'src/index.ts',
-    external: ['vue'],
-    output: {
-      format: 'esm',
-      file: 'dist/ds-library.mjs',
-      banner: banner
+    {
+      "input": "src/index.ts",
+      "external": ["vue"],
+      "output": {
+        "format": "esm",
+        "file": "dist/v-lock-ui-library.mjs",
+        "banner": "banner"
+      },
+      "plugins": [
+        "node({ extensions: ['.vue', '.ts'] })",
+        "typescript({ typescript: require('typescript') })",
+        "vue(vuePluginConfig)",
+        "babel(babelOptions)",
+        "cjs()"
+      ]
     },
-    plugins: [
-      node({
-        extensions: ['.vue', '.ts']
-      }),
-      typescript({
-        typescript: require('typescript')
-      }),
-      vue(vuePluginConfig),
-      babel(babelOptions),
-      cjs()
-    ]
-  },
-  {
-    input: entries,
-    external: ['vue'],
-    output: {
-      format: 'cjs',
-      dir: 'dist/cjs',
-      exports: 'named'
+    {
+      "input": "entries",
+      "external": ["vue"],
+      "output": {
+        "format": "cjs",
+        "dir": "dist/cjs",
+        "exports": "named"
+      },
+      "plugins": [
+        "node({ extensions: ['.vue', '.ts'] })",
+        "typescript({ typescript: require('typescript') })",
+        "vue(vuePluginConfig)",
+        "babel(babelOptions)",
+        "cjs()"
+      ]
     },
-    plugins: [
-      node({
-        extensions: ['.vue', '.ts']
-      }),
-      typescript({
-        typescript: require('typescript')
-      }),
-      vue(vuePluginConfig),
-      babel(babelOptions),
-      cjs()
-    ]
-  },
-  {
-    input: 'src/index.ts',
-    external: ['vue'],
-    output: {
-      format: 'umd',
-      name: capitalize('ds-library'),
-      file: 'dist/ds-library.js',
-      exports: 'named',
-      banner: banner,
-      globals: {
-        vue: 'Vue'
-      }
-    },
-    plugins: [
-      node({
-        extensions: ['.vue', '.ts']
-      }),
-      typescript({
-        typescript: require('typescript')
-      }),
-      vue(vuePluginConfig),
-      babel(babelOptions),
-      cjs()
-    ]
-  }
-],
-
+    {
+      "input": "src/index.ts",
+      "external": ["vue"],
+      "output": {
+        "format": "umd",
+        "name": "capitalize('v-lock-ui-library')",
+        "file": "dist/v-lock-ui-library.js",
+        "exports": "named",
+        "banner": "banner",
+        "globals": {
+          "vue": "Vue"
+        }
+      },
+      "plugins": [
+        "node({ extensions: ['.vue', '.ts'] })",
+        "typescript({ typescript: require('typescript') })",
+        "vue(vuePluginConfig)",
+        "babel(babelOptions)",
+        "cjs()"
+      ]
+    }
+  ]
 }

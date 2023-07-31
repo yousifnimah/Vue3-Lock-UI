@@ -1,19 +1,12 @@
 {
   "name": "v-lock-ui",
   "version": "1.1.0",
-  "description": "",
-  "main": "dist/v-lock-ui-lib.ssr.js",
-  "browser": "dist/v-lock-ui-lib.esm.js",
-  "module": "dist/v-lock-ui-lib.esm.js",
-  "unpkg": "dist/v-lock-ui-lib.min.js",
-  "files": [
-    "dist/*",
-    "src/**/*.vue"
-  ],
+  "description": "A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications.",
+  "type": "module",
   "scripts": {
     "build:vue": "rollup -c && rollup -c --environment MINIFY",
     "build:vue:watch": "rollup -c --watch",
-    "build:style": "sass --no-charset ./src/styles/index.scss | node ./build/print-banner.js > dist/ds-library.css && cleancss -o dist/ds-library.min.css dist/ds-library.css",
+    "build:style": "sass --no-charset ./src/styles/index.scss | node ./build/print-banner.js > dist/v-lock-ui-library.css && cleancss -o dist/v-lock-ui-library.min.css dist/v-lock-ui-library.css",
     "build:lib": "rimraf dist && npm run build:vue && npm run build:style",
     "publish:lib": "npm run build:lib && npm publish"
   },
@@ -22,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yousifnimah/VueSecureLock.git"
+    "url": "git+https://github.com/yousifnimah/Vue3-Lock-UI.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Vue3", "LockUI", "Password"],
+  "author": "Yousif N. Abbas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yousifnimah/VueSecureLock/issues"
+    "url": "https://github.com/yousifnimah/Vue3-Lock-UI/issues"
   },
-  "homepage": "https://github.com/yousifnimah/VueSecureLock#readme",
+  "homepage": "https://github.com/yousifnimah/Vue3-Lock-UI#readme",
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.3",
