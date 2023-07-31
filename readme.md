@@ -25,7 +25,7 @@ npm install vuesecurelock
 
 <h3>Using with Vue3</h3><hr>
 
-```
+``` vue
 <template>
   <div class="home">
     <LockElem :password="'1234'">
