@@ -1,1 +1,3 @@
-export { default as VLockUI } from "./components/VLockUI/VLockUI.vue";
+import VLockUI from './components/VLockUI/VLockUI.vue'
+
+export default VLockUI

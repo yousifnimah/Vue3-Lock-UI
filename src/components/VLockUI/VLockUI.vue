@@ -134,7 +134,7 @@ onMounted(() => {
   CheckCachedState()
 })
 
-defineComponent({
+const VLockUI = defineComponent({
   name: "VLockUI",
   components: {
     Icon
