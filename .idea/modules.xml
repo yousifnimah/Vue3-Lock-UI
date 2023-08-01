@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/vlock-ui.iml" filepath="$PROJECT_DIR$/.idea/vlock-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/v-lock-ui.iml" filepath="$PROJECT_DIR$/.idea/v-lock-ui.iml" />
     </modules>
   </component>
 </project>

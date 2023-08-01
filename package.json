@@ -1,27 +1,47 @@
 {
   "name": "v-lock-ui",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications.",
-  "keywords": ["VueLockUI","UI","Lock"],
-  "private": false,
+  "main": "./dist/v-lock-ui.umd.js",
+  "module": "./dist/v-lock-ui.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/v-lock-ui.esm.js",
+      "require": "./dist/v-lock-ui.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "serve": "vite preview"
+  },
+  "keywords": [
+    "VueLockUI",
+    "UI",
+    "Lock",
+    "vue",
+    "vue3",
+    "vite",
+    "component",
+    "library"
+  ],
   "author": {
     "name": "Yousif N. Abbas",
     "email": "me@yousif.app"
   },
-  "main" : ".dist/VLockUI.common.js",
-  "files": ["dist/*"],
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build-library": "vue-cli-service build --target lib --name VLockUI ./src/index.ts",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "vue-class-component": "^8.0.0-0"
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.8",
+    "vite-plugin-dts": "^3.4.0",
+    "vue": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -34,26 +54,5 @@
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended",
-      "@vue/typescript/recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+  }
 }
