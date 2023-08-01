@@ -1,6 +1,8 @@
 {
   "name": "vlock-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications.",
+  "keywords": ["VueLockUI","UI","Lock"],
   "private": false,
   "author": {
     "name": "Yousif N. Abbas",
