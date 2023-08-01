@@ -1,17 +1,11 @@
-import { App } from 'vue'
+import {App, Plugin} from 'vue'
+import VLockUI from './components/VLockUI/VLockUI.vue'
 
-import * as components from './components'
 
-const VLockUI = {
-    install(app: App) {
-        // Auto import all components
-        for (const componentKey in components) {
-            app.use((components as any)[componentKey])
-        }
+export default {
+    install(Vue: App) {
+        Vue.component(VLockUI.name, VLockUI)
     }
-}
+} as Plugin
 
-export default VLockUI
-
-// export all components as vue plugin
-export * from './components'
+export {VLockUI}
