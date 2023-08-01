@@ -2,7 +2,7 @@ import { App } from 'vue'
 
 import * as components from './components'
 
-const Library = {
+const VLockUI = {
     install(app: App) {
         // Auto import all components
         for (const componentKey in components) {
@@ -11,7 +11,7 @@ const Library = {
     }
 }
 
-export default Library
+export default VLockUI
 
 // export all components as vue plugin
 export * from './components'

@@ -1,5 +1,6 @@
 
-import { text } from './build/banner.json'
+import { text } from './build/banner.json' assert { type: "json" };
+
 import packageInfo from './package.json'
 
 import vue from 'rollup-plugin-vue'

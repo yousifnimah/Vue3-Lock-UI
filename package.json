@@ -2,7 +2,6 @@
   "name": "v-lock-ui",
   "version": "1.1.0",
   "description": "A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications.",
-  "type": "module",
   "scripts": {
     "build:vue": "rollup -c && rollup -c --environment MINIFY",
     "build:vue:watch": "rollup -c --watch",
@@ -17,7 +16,11 @@
     "type": "git",
     "url": "git+https://github.com/yousifnimah/Vue3-Lock-UI.git"
   },
-  "keywords": ["Vue3", "LockUI", "Password"],
+  "keywords": [
+    "Vue3",
+    "LockUI",
+    "Password"
+  ],
   "author": "Yousif N. Abbas",
   "license": "ISC",
   "bugs": {
@@ -28,9 +31,11 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
+    "@vue/cli-service": "^5.0.8",
     "clean-css-cli": "^5.6.2",
     "rimraf": "^5.0.1",
     "rollup": "^3.27.0",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.35.0",
