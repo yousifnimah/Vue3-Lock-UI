@@ -1,20 +1,22 @@
 {
   "name": "v-lock-ui",
-  "version": "1.1.1",
+  "private": false,
+  "version": "1.1.2",
+  "type": "module",
   "description": "A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications.",
   "main": "./dist/v-lock-ui.umd.js",
   "module": "./dist/v-lock-ui.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/components/"
+  ],
   "exports": {
     ".": {
       "import": "./dist/v-lock-ui.esm.js",
       "require": "./dist/v-lock-ui.js"
     }
   },
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite",
@@ -30,9 +32,19 @@
     "component",
     "library"
   ],
+  "license": "MIT",
   "author": {
     "name": "Yousif N. Abbas",
+    "email": "me@yousif.app",
+    "url": "https://yousif.app"
+  },
+  "bugs": {
+    "url": "https://github.com/yousifnimah/Vue3-Lock-UI/issues",
     "email": "me@yousif.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yousifnimah/Vue3-Lock-UI"
   },
   "peerDependencies": {
     "vue": "^3.0.0"

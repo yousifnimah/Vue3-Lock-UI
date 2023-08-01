@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "v-lock-ui",
+      name: "VLockUI",
       fileName: "v-lock-ui",
     },
     rollupOptions: {
