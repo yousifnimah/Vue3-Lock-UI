@@ -1,7 +1,7 @@
 {
   "name": "vlock-ui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "author": {
     "name": "Yousif N. Abbas",
     "email": "me@yousif.app"
