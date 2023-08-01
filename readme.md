@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="VueLockUI" title="vue lock ui logo" src="https://i.imgur.com/yKoJZrb.png" width="450">
 </p>
-<h1 align="center">Vue3 Lock UI</h1>
+<h1 align="center">Vue3 + Vite Lock UI</h1>
 
 
 A Vue library that empowers developers to easily integrate secure and user-friendly password-related UI components into their applications.
@@ -15,6 +15,7 @@ A Vue library that empowers developers to easily integrate secure and user-frien
 ## Key Features:
 
 - Vue 3 support
+- Vite support
 - TypeScript support
 - Easy integration: Can quickly incorporate VueSecureLock's features into the application without extensive effort.
 - Customizable: VueLockUI allows easy customization, enabling you to change colors and set expiration for state memory.
@@ -30,21 +31,25 @@ npm install v-lock-ui
 
 <h3>Usage</h3><hr>
 
-<p>To use VueLockUI, simply import the component:<p>
+<p>Import the component and register it globally in your Vue instance:</p>
 
-```js
-import VLockUi from 'v-lock-ui'
-``` 
+```ts
+import { createApp } from 'vue'
+import App from './App.vue'
+import {VLockUI} from 'v-lock-ui'
 
-<p>Then register it as a Vue component:</p>
+const app = createApp(App);
+app.component('VLockUI', VLockUI).mount('#app')
 
-```vue
-defineComponent({
-  components: {VLockUi}
-});
 ```
 
-Last step, inside the template add any element or UI component into it and set the **password** that you want to match with.
+<p>or locally in your component:<p>
+
+```ts
+import {VLockUi} from 'v-lock-ui'
+```
+
+Use the component in your template:
 
 ```vue
 
@@ -72,14 +77,11 @@ Full Example:
 <script setup lang="ts">
 import {defineComponent, ref} from "vue";
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-import VLockUI from "@/components/VLockUI/VLockUI.vue";
+import {VLockUi} from 'v-lock-ui'
 
 defineComponent({
   name: "HomeView",
-  components: {
-    VLockUI,
-    HelloWorld
-  }
+  components: {HelloWorld}
 });
 </script>
 ```
