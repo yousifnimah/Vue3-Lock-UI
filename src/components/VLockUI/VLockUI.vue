@@ -10,14 +10,14 @@
           <button type="submit" :style="{'background-color': ButtonColor}" class="overlay-button">{{ ButtonText }}</button>
         </div>
       </form>
-      <div class="overlay-bg" :class="{'blur': blur}"/>
+      <div class="overlay-bg" :class="{'blur': Blur}"/>
     </div>
     <slot/>
   </div>
 </template>
 
 <script setup lang="ts">
-import {defineComponent, defineProps, onMounted, ref} from "vue";
+import {defineComponent, onMounted, ref} from "vue";
 import Icon from "./Icon.vue";
 
 const props = defineProps({
@@ -134,7 +134,7 @@ onMounted(() => {
   CheckCachedState()
 })
 
-const VLockUI = defineComponent({
+defineComponent({
   name: "VLockUI",
   components: {
     Icon

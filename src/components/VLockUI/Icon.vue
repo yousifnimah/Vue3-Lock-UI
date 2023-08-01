@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import {defineComponent, defineProps, onMounted, ref, watch} from "vue";
-const switchLabel = ref(null);
+import {defineComponent, onMounted, ref, watch} from "vue";
+const switchLabel :any= ref(null);
 
 const props = defineProps({
   LockedColor: {

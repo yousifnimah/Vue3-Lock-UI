@@ -14,7 +14,8 @@
       "DOM"
     ],
     "skipLibCheck": true,
-    "noEmit": true
+    "outDir": "dist",
+    "declaration": true
   },
   "include": [
     "src/**/*.ts",
@@ -22,6 +23,7 @@
     "src/**/*.tsx",
     "src/**/*.vue"
   ],
+  "exclude": ["src/App.vue", "src/main.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
