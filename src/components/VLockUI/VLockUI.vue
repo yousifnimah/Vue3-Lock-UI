@@ -2,7 +2,7 @@
   <div class="container">
     <div v-if="!Secured" class="overlay" :class="{'overlay-light': !Dark, 'overlay-dark': Dark}">
       <form @submit.prevent="unlock" class="overlay-content">
-        <div class="box">
+        <div class="overlay-box">
           <Icon :UnlockedColor="UnlockedColor" :LockedColor="LockedColor" :locked="Locked"/>
           <h2 class="overlay-title">{{ Title }}</h2>
           <p class="overlay-subtitle">{{ Subtitle }}</p>

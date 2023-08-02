@@ -47,7 +47,7 @@
   height: inherit;
 }
 
-.box {
+.overlay-box {
   width: 100%;
   margin-top: -20px;
   text-align: center;
@@ -55,6 +55,7 @@
 
 .overlay-title, .overlay-subtitle {
   width: 100%;
+  padding: 10px;
 }
 
 .overlay-subtitle {
